@@ -1,4 +1,5 @@
 import { useRef, useState } from "react";
+
 const DiaryEditor = () => {
   const authorInput = useRef();
   const contentInput = useRef();
