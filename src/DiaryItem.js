@@ -1,7 +1,7 @@
 const DiaryItem = ({ author, content, created_date, emotion, id }) => {
   return (
     <div className="DiaryItem">
-      <div classNAme="info">
+      <div className="info">
         <span>
           작성자 : {author} | 감정점수 : {emotion}
         </span>
