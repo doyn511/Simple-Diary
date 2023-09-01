@@ -1,6 +1,12 @@
-import { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 
+//DiaryEditor 컴포넌트의 prop : onCreate함수
+//onCreate() : 일기 저장하기 버튼을 눌렀을 때, DiaryList에 일기를 추가해주는 역할
 const DiaryEditor = ({ onCreate }) => {
+  useEffect(() => {
+    console.log("DiaryEditor 렌더");
+  });
+
   const authorInput = useRef();
   const contentInput = useRef();
   const [state, setState] = useState({
@@ -75,4 +81,4 @@ const DiaryEditor = ({ onCreate }) => {
   );
 };
 
-export default DiaryEditor;
+export default React.memo(DiaryEditor);
