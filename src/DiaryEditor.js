@@ -1,10 +1,14 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useContext, useRef, useState } from "react";
+import { DiaryDispatchContext } from "./App";
 
 //DiaryEditor 컴포넌트의 prop : onCreate함수
 //onCreate() : 일기 저장하기 버튼을 눌렀을 때, DiaryList에 일기를 추가해주는 역할
-const DiaryEditor = ({ onCreate }) => {
+const DiaryEditor = () => {
+  const { onCreate } = useContext(DiaryDispatchContext);
+
   const authorInput = useRef();
   const contentInput = useRef();
+
   const [state, setState] = useState({
     author: "",
     content: "",
